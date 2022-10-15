@@ -36,6 +36,7 @@ ls(char *path)
   }
 
   if(fstat(fd, &st) < 0){
+// place info about the opened fd into st;
     fprintf(2, "ls: cannot stat %s\n", path);
     close(fd);
     return;
